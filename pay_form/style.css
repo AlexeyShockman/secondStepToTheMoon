@@ -1,0 +1,81 @@
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    line-height: 32px;
+}
+a, a:visited, a:active {
+    text-decoration: none;
+    color: #3692D9;
+}
+
+
+body {
+    background-color: black
+}
+
+#payForm {
+    margin: 15% auto;
+    height: 360px;
+    width: 392px;
+    background: #ffffff;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 35px 36px 25px;
+}
+
+img[src="logo_2.jpg"] {
+    margin: 0 auto 28px;
+    display: block;
+    top: 35px;
+    left: 142px;
+    height: 32px;
+}
+
+#email, #pass, #enter_btn {
+    width: 320px;
+    height: 40px;
+    left: 36px;
+    border: 1px solid rgba(0, 1, 4, 0.16);
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+#email, #pass {
+    padding-right: 35px;
+    padding-left: 16px;
+}
+#pass{margin-bottom: 11px;}
+#email:focus, #pass:focus {
+    border: #DF524E
+}
+
+#email:valid {
+    background: url("ok.png") no-repeat scroll 293px 18px;
+}
+
+#pass:valid {
+    background: url("eye.png") no-repeat scroll 288px 16px;
+    top: 148px;
+}
+
+#rememberForgot {
+    height: 32px;
+}
+label span {
+
+}
+#forgotPass {
+    float: right;
+}
+
+#enter_btn {
+    background-color: #3FA250;
+    color: #ffffff;
+    margin-top: 13px;
+}
+
+#registration  {
+    text-align: center;
+    color: rgba(0, 1, 4, 0.48);
+}
