@@ -79,3 +79,64 @@ img[src="logo_2.jpg"] {
     color: rgba(0, 1, 4, 0.48);
     line-height: 32px;
 }
+
+/*отсюда стартует стилизация чекбоксов*/
+input[type="checkbox"]:checked,
+input[type="checkbox"]:not(:checked)
+{
+    position: absolute;
+    left: -9999px;
+}
+
+input[type="checkbox"]:checked + label,
+input[type="checkbox"]:not(:checked) + label {
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+    line-height: 20px;
+    cursor: pointer;
+}
+input[type="checkbox"]:checked + label:before,
+input[type="checkbox"]:not(:checked) + label:before{
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 2px;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #3692D9;
+    background-color: #ffffff;
+    border-radius: 2px;
+}
+
+input[type="checkbox"]:checked + label:after,
+input[type="checkbox"]:not(:checked) + label:after{
+    content: "";
+    position: absolute;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    left: 10px;
+    top: 6px;
+    width: 7px;
+    height: 4px;
+    border-radius: 1px;
+    border-left: 1px solid #3692D9;
+    border-bottom: 1px solid #3692D9;
+    -webkit-transform: rotate(-40deg);
+    -moz-transform: rotate(-40deg);
+    -o-transform: rotate(-40deg);
+    -ms-transform: rotate(-40deg);
+    transform: rotate(-40deg);
+}
+input[type="checkbox"]:not(:checked) + label:after{
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked + label:after{
+    opacity: 1;
+}
+/*конец стилизации чекбоксов*/
+
+
