@@ -31,83 +31,100 @@ h3 {
 .main {
     width: 100vw;
     height: 100vh;
+    display: grid;
+    grid-template-rows: auto 62px;
 }
 
 .content {
     background: #FFFFFF;
+    display: grid;
+    grid-template-columns: 169px auto;
 
 }
 
 .sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: calc(100vh - 62px);
-    width: 169px;
+    /*position: fixed;*/
+    /*left: 0;*/
+    /*top: 0;*/
+    /*height: calc(100vh - 62px);*/
+    /*width: 169px;*/
     outline: 1px solid #EEEEEE;
-    background: #FFFFFF url("images/sidebar/Mask Group.png") no-repeat 26px 25px;
-    padding-top: 100px;
+    background: #FFFFFF url("images/sidebar/Mask Group.svg") no-repeat 26px 25px;
+    padding-top: 88px;
 }
 
 .sidebar-list {
+    display: grid;
     list-style: none;
 }
 
+.sidebar-list-first {
+    grid-template-rows: repeat(5, 40px);
+}
+
+.sidebar-list-second {
+    grid-template-rows: repeat(4, 40px);
+}
+
+.sidebar-list-third {
+    grid-template-rows: repeat(4, 40px);
+}
+
 .sidebar-plus {
-    background: url("images/sidebar/Plus.png") no-repeat 138px 4px;
+    background: url("images/sidebar/Plus.svg") no-repeat 138px 50%;
 }
 
 .sidebar-discover {
-    background-image: url("images/sidebar/Discover.png");
+    background-image: url("images/sidebar/Discover.svg");
     color: #3E2AD1;
 }
 
 .sidebar-songs {
-    background-image: url("images/sidebar/Songs.png");
+    background-image: url("images/sidebar/Songs.svg");
 }
 
 .sidebar-albums {
-    background-image: url("images/sidebar/Albums.png");
+    background-image: url("images/sidebar/Albums.svg");
 }
 
 .sidebar-artists {
-    background-image: url("images/sidebar/Artists.png");
+    background-image: url("images/sidebar/Artists.svg");
 }
 
 .sidebar-youtube {
-    background-image: url("images/sidebar/YouTube.png");
+    background-image: url("images/sidebar/YouTube.svg");
 }
 
 .sidebar-favourite {
-    background-image: url("images/sidebar/Favourite.png");
+    background-image: url("images/sidebar/Favourite.svg");
 }
 
 .sidebar-history {
-    background-image: url("images/sidebar/Recent History.png");
+    background-image: url("images/sidebar/Recent History.svg");
 }
 
 .sidebar-download {
-    background-image: url("images/sidebar/Download Items.png");
+    background-image: url("images/sidebar/Download Items.svg");
 }
 
 .sidebar-local {
-    background-image: url("images/sidebar/Local Files.png");
+    background-image: url("images/sidebar/Local Files.svg");
 }
 
 .sidebar-bangla,
 .sidebar-english,
-.sidebar-store,
+.sidebar-style,
 .sidebar-hindi {
-    background-image: url("images/sidebar/PlayList.png");
+    background-image: url("images/sidebar/PlayList.svg");
 }
 
 
 .sidebar-list li {
     padding-left: 56px;
-    padding-bottom: 24px;
     background-repeat: no-repeat;
-    background-position: 26px 0;
+    background-position: 26px 50%;
     opacity: 50%;
+    line-height: 40px
 }
 
 
@@ -121,7 +138,6 @@ h3 {
 
 .sidebar h4, .sidebar li {
     font-size: 12px;
-    line-height: 16px;
     font-weight: 900;
 }
 
@@ -131,21 +147,19 @@ h3 {
 
 .sidebar h4 {
     padding-left: 26px;
-    padding-bottom: 16px;
+    margin-top: 8px;
+    line-height: 24px;
 }
 
 
 .music {
-    margin-left: 169px;
     display: grid;
-    grid-template-rows: 65px 307px 236px 200px;
-    overflow: hidden;
-    max-width: calc(100vw - 169px);
+    grid-template-rows: 65px 307px auto 100px;
 }
 
 .header{
     display: grid;
-    grid-template-columns: calc(100vw - 676px) 87px 87px 87px 246px;
+    grid-template-columns: 1fr 87px 87px 87px 246px;
 }
 
 .header-search, .header-tv, .header-radio, .header-bell, .header-account{
@@ -153,7 +167,7 @@ h3 {
 }
 
 .header-search{
-    background: url("images/header/Serch.png") no-repeat 21px 50%;
+    background: url("images/header/Serch.svg") no-repeat 21px 50%;
 }
 
 .header-search input{
@@ -168,19 +182,19 @@ h3 {
 }
 
 .header-tv{
-    background-image: url("images/header/TV.png");
+    background-image: url("images/header/TV.svg");
 }
 
 .header-radio{
-    background-image: url("images/header/Radio.png");
+    background-image: url("images/header/Radio.svg");
 }
 
 .header-bell{
-    background-image: url("images/header/Bell.png");
+    background-image: url("images/header/Bell.svg");
 }
 
 .header-account{
-    background: url("images/header/Account.png") no-repeat 23px 50%;
+    background: url("images/header/Account.svg") no-repeat 23px 50%;
     padding-top: 15px;
     padding-left: 71px;
 }
@@ -191,7 +205,7 @@ h3 {
     color: #000000;
 }
 .header-account-status{
-    background: url("images/header/Crown.png") no-repeat 5px 50%;
+    background: url("images/header/Crown.svg") no-repeat 5px 50%;
     padding-left: 20px;
     font-size: 10px;
     line-height: 16px;
@@ -199,7 +213,7 @@ h3 {
 }
 
 .trending {
-    background: no-repeat url("images/music.png") right #e50d24;
+    background: no-repeat url("images/music.svg") right #e50d24;
     max-width: calc(100vw - 169px);
 }
 
@@ -229,7 +243,7 @@ h3 {
 
 .trending-play, .trending-share{
     cursor: pointer;
-    background: #FFFFFF url("images/trending/Play.png") no-repeat;
+    background: #FFFFFF url("images/trending/Play.svg") no-repeat;
     box-shadow: 0 2px 8px #BC1428;
     border-radius: 3px;
     height: 22px;
@@ -257,13 +271,13 @@ h3 {
 .trending-slide-btn{
     width: 16px;
     height: 5px;
-    background: url("images/trending/notActive.png");
+    background: url("images/trending/notActive.svg");
     margin-right: 5px;
 }
 .trending-slide-btn:hover,
 .trending-slide-btn-active
 {
-    background: url("images/trending/active.png");
+    background: url("images/trending/active.svg");
 }
 
 .featured {
@@ -276,45 +290,48 @@ h3 {
 }
 
 .featured-carousel {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 112px);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*justify-content: left;*/
 
 }
 
 .carousel-card {
     height: 154px;
     width: 112px;
-    margin-right: 20px;
     overflow: hidden;
 }
 
 .card1 {
-    background: url("images/carousel/1.png") no-repeat;
+    background: url("images/carousel/1.svg") no-repeat;
 }
 
 .card2 {
-    background: url("images/carousel/2.png") no-repeat;
+    background: url("images/carousel/2.svg") no-repeat;
 }
 
 .card3 {
-    background: url("images/carousel/3.png") no-repeat;
+    background: url("images/carousel/3.svg") no-repeat;
 }
 
 .card4 {
-    background: url("images/carousel/4.png") no-repeat;
+    background: url("images/carousel/4.svg") no-repeat;
 }
 
 .card5 {
-    background: url("images/carousel/5.png") no-repeat;
+    background: url("images/carousel/5.svg") no-repeat;
 }
 
 .card6 {
-    background: url("images/carousel/6.png") no-repeat;
+    background: url("images/carousel/6.svg") no-repeat;
 }
 
 .card7 {
-    background: url("images/carousel/8.png") no-repeat;
+    background: url("images/carousel/8.svg") no-repeat;
 }
 
 .carousel-card-song,
@@ -343,15 +360,11 @@ h3 {
 
 .player {
     display: grid;
-    grid-template-columns: 167px calc(100vw - 167px);
-    position: fixed;
-    left: 0;
-    bottom: 0;
+    grid-template-columns: 169px auto;
 }
 
 
 .player-right {
-    height: 62px;
     background-color: #0F1E36;
 }
 

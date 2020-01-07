@@ -12,12 +12,12 @@
     <div class="modalContent">
         <div id="authorizationForm">
             <img src="logo_2.jpg" alt="UnitPay logo">
-            <form action="">
+            <form onsubmit="sendToServer('https://reqres.in/api/users?page=2', this)">
                 <div>
-                    <input id="email" type="text" placeholder="e-mail" autocomplete="off" required>
+                    <input id="email" name="email" type="text" placeholder="e-mail" autocomplete="off" required>
                 </div>
                 <div>
-                    <input id="pass" type="password" placeholder="password" required>
+                    <input id="pass" name="password" type="password" placeholder="password" required>
                 </div>
                 <div id="rememberForgot">
                     <input id="checkBoxRemember" type="checkbox"><label for="checkBoxRemember">Запомнить меня</label>
@@ -29,5 +29,21 @@
         </div>
     </div>
 </div>
+<script>
+    function sendToServer(url, form) {
+        let request = new XMLHttpRequest;
+        request.open("POST", url, true);
+        let params = new FormData(form);
+        request.addEventListener("readystatechange", () => {
+            if (request.readyState === 4 && request.status === 200) {
+                console.log(request.responseText);
+            }
+        });
+        request.send(params);
+    }
+
+
+</script>
 </body>
 </html>
+

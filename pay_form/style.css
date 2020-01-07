@@ -3,6 +3,7 @@
     font-size: 14px;
 
 }
+
 a, a:visited, a:active {
     text-decoration: none;
     color: #3692D9;
@@ -14,7 +15,7 @@ body {
 }
 
 #payForm {
-    margin: 15% auto;
+    margin: 15% auto auto;
     height: 360px;
     width: 392px;
     background: #ffffff;
@@ -23,7 +24,7 @@ body {
     padding: 35px 36px 25px;
 }
 
-img[src="logo_2.jpg"] {
+#authorizationForm > img {
     margin: 0 auto 28px;
     display: block;
     top: 35px;
@@ -45,10 +46,14 @@ img[src="logo_2.jpg"] {
     padding-right: 35px;
     padding-left: 16px;
 }
-#pass{margin-bottom: 11px;}
+
+#pass {
+    margin-bottom: 11px;
+}
+
 #email:focus-within, #pass:focus-within {
     border: 1px solid #DF524E;
-    outline:none;
+    outline: none;
 }
 
 #email:valid {
@@ -64,6 +69,7 @@ img[src="logo_2.jpg"] {
     height: 32px;
     line-height: 32px;
 }
+
 #forgotPass {
     float: right;
 }
@@ -74,7 +80,7 @@ img[src="logo_2.jpg"] {
     margin-top: 13px;
 }
 
-#registration  {
+#registration {
     text-align: center;
     color: rgba(0, 1, 4, 0.48);
     line-height: 32px;
@@ -82,8 +88,7 @@ img[src="logo_2.jpg"] {
 
 /*отсюда стартует стилизация чекбоксов*/
 input[type="checkbox"]:checked,
-input[type="checkbox"]:not(:checked)
-{
+input[type="checkbox"]:not(:checked) {
     position: absolute;
     left: -9999px;
 }
@@ -96,8 +101,9 @@ input[type="checkbox"]:not(:checked) + label {
     line-height: 20px;
     cursor: pointer;
 }
+
 input[type="checkbox"]:checked + label:before,
-input[type="checkbox"]:not(:checked) + label:before{
+input[type="checkbox"]:not(:checked) + label:before {
     content: "";
     position: absolute;
     left: 7px;
@@ -110,7 +116,7 @@ input[type="checkbox"]:not(:checked) + label:before{
 }
 
 input[type="checkbox"]:checked + label:after,
-input[type="checkbox"]:not(:checked) + label:after{
+input[type="checkbox"]:not(:checked) + label:after {
     content: "";
     position: absolute;
     -webkit-transition: all 0.2s ease;
@@ -130,13 +136,13 @@ input[type="checkbox"]:not(:checked) + label:after{
     -ms-transform: rotate(-40deg);
     transform: rotate(-40deg);
 }
-input[type="checkbox"]:not(:checked) + label:after{
+
+input[type="checkbox"]:not(:checked) + label:after {
     opacity: 0;
 }
 
-input[type="checkbox"]:checked + label:after{
+input[type="checkbox"]:checked + label:after {
     opacity: 1;
 }
+
 /*конец стилизации чекбоксов*/
-
-
