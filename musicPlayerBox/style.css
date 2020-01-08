@@ -74,6 +74,10 @@ h3 {
     background: url("images/sidebar/Plus.svg") no-repeat 138px 50%;
 }
 
+.sidebar-plus:hover {
+    background-size: 9%;
+}
+
 .sidebar-discover {
     background-image: url("images/sidebar/Discover.svg");
     color: #3E2AD1;
@@ -154,8 +158,9 @@ h3 {
 
 .music {
     display: grid;
-    grid-template-rows: 65px 307px auto 100px;
+    grid-template-rows: 65px calc(100vh - 127px);
 }
+
 
 .header{
     display: grid;
@@ -172,13 +177,22 @@ h3 {
 
 .header-search input{
     outline: none;
-    margin-top: 23px;
-    margin-left: 50px;
+    margin: 23px 50px;
     border: none;
 }
 
 .header-tv, .header-radio, .header-bell{
     background: no-repeat 50% 50%;
+}
+
+.header-search:hover {
+    background-size: 3%;
+}
+
+.header-tv:hover,
+.header-radio:hover,
+.header-bell:hover {
+    background-size: 30%;
 }
 
 .header-tv{
@@ -212,9 +226,19 @@ h3 {
     color: #3E2AD1;
 }
 
+.music-scroll {
+    overflow-y: scroll;
+    display: grid;
+    grid-template-rows: 307px;
+    background: #f4faff;
+}
+
+.music-scroll::-webkit-scrollbar {
+    width: 0;
+}
+
 .trending {
     background: no-repeat url("images/music.svg") right #e50d24;
-    max-width: calc(100vw - 169px);
 }
 
 .trending-text{
@@ -281,8 +305,7 @@ h3 {
 }
 
 .featured {
-    margin-top: 24px;
-    margin-left: 22px;
+    margin: 24px 22px 11px;
 }
 
 .featured h3 {
@@ -355,8 +378,80 @@ h3 {
 }
 
 .top {
-    margin-left: 22px;
+    margin: 11px 22px 0;
 }
+
+
+.top-line, .line {
+    display: grid;
+    grid-template-columns: 39px 39px 3fr 2fr 180px 150px 117px;
+    grid-column-gap: 10px;
+    line-height: 39px;
+
+}
+
+.top-line-like:hover,
+.top-line-option div:hover {
+    background-size: 50%;
+}
+
+.top-line-number, .top-headline-number {
+    justify-self: center;
+}
+
+.top-line-option {
+    display: grid;
+    grid-template-columns: repeat(3, 39px);
+    grid-template-rows: repeat(auto-fill, 39px);
+}
+
+.top-line-song,
+.top-headline-song {
+    margin-left: 15px;
+}
+
+.line:hover {
+    background: white;
+    box-shadow: 0 0 2px #3E2AD1;
+    border-radius: 3px;
+}
+
+.top-line-like {
+    background: url("images/Top/Favourite.svg") no-repeat 50% 50%;
+}
+
+@keyframes pulse-line {
+    from {
+        background-size: 38%;
+    }
+    50% {
+        background-size: 55%;
+    }
+    to {
+        background-size: 38%;
+    }
+}
+
+.line:hover .top-line-number {
+    background: url("images/Top/Voice_recorder.svg") no-repeat 50% 50%;
+    justify-self: auto;
+    color: rgba(0, 0, 0, 0);
+    animation: pulse-line 0.7s infinite ease-in-out;
+}
+
+.top-line-option-one {
+    background: url("images/Top/Download Items.svg") no-repeat 50% 50%;
+}
+
+
+.top-line-option-two {
+    background: url("images/Top/Share.svg") no-repeat 50% 50%;
+}
+
+.top-line-option-three {
+    background: url("images/Top/Group.svg") no-repeat 50% 50%;
+}
+
 
 .player {
     display: grid;
